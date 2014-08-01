@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="94">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="contrib">
+        <in>adduser-old.c</in>
+        <in>adduser.c</in>
+        <in>pwdauth.c</in>
+      </df>
+      <df name="lib">
+        <in>commonio.c</in>
+        <in>encrypt.c</in>
+        <in>fields.c</in>
+        <in>fputsx.c</in>
+        <in>get_gid.c</in>
+        <in>get_pid.c</in>
+        <in>get_uid.c</in>
+        <in>getdef.c</in>
+        <in>getlong.c</in>
+        <in>getulong.c</in>
+        <in>groupio.c</in>
+        <in>groupmem.c</in>
+        <in>gshadow.c</in>
+        <in>lockpw.c</in>
+        <in>nscd.c</in>
+        <in>port.c</in>
+        <in>pwauth.c</in>
+        <in>pwio.c</in>
+        <in>pwmem.c</in>
+        <in>selinux.c</in>
+        <in>semanage.c</in>
+        <in>sgetgrent.c</in>
+        <in>sgetpwent.c</in>
+        <in>sgetspent.c</in>
+        <in>sgroupio.c</in>
+        <in>shadow.c</in>
+        <in>shadowio.c</in>
+        <in>shadowmem.c</in>
+        <in>spawn.c</in>
+        <in>tcbfuncs.c</in>
+        <in>utent.c</in>
+      </df>
+      <df name="libmisc">
+        <in>addgrps.c</in>
+        <in>age.c</in>
+        <in>audit_help.c</in>
+        <in>basename.c</in>
+        <in>chkname.c</in>
+        <in>chowndir.c</in>
+        <in>chowntty.c</in>
+        <in>cleanup.c</in>
+        <in>cleanup_group.c</in>
+        <in>cleanup_user.c</in>
+        <in>console.c</in>
+        <in>copydir.c</in>
+        <in>entry.c</in>
+        <in>env.c</in>
+        <in>failure.c</in>
+        <in>find_new_gid.c</in>
+        <in>find_new_uid.c</in>
+        <in>getdate.c</in>
+        <in>getgr_nam_gid.c</in>
+        <in>getrange.c</in>
+        <in>hushed.c</in>
+        <in>isexpired.c</in>
+        <in>limits.c</in>
+        <in>list.c</in>
+        <in>log.c</in>
+        <in>loginprompt.c</in>
+        <in>mail.c</in>
+        <in>motd.c</in>
+        <in>myname.c</in>
+        <in>obscure.c</in>
+        <in>pam_pass.c</in>
+        <in>pam_pass_non_interractive.c</in>
+        <in>pwd2spwd.c</in>
+        <in>pwd_init.c</in>
+        <in>pwdcheck.c</in>
+        <in>remove_tree.c</in>
+        <in>rlogin.c</in>
+        <in>root_flag.c</in>
+        <in>salt.c</in>
+        <in>setugid.c</in>
+        <in>setupenv.c</in>
+        <in>shell.c</in>
+        <in>strtoday.c</in>
+        <in>sub.c</in>
+        <in>sulog.c</in>
+        <in>ttytype.c</in>
+        <in>tz.c</in>
+        <in>ulimit.c</in>
+        <in>user_busy.c</in>
+        <in>utmp.c</in>
+        <in>valid.c</in>
+        <in>xgetXXbyYY.c</in>
+        <in>xgetgrgid.c</in>
+        <in>xgetgrnam.c</in>
+        <in>xgetpwnam.c</in>
+        <in>xgetpwuid.c</in>
+        <in>xgetspnam.c</in>
+        <in>xmalloc.c</in>
+        <in>yesno.c</in>
+      </df>
+      <df name="src">
+        <in>chage.c</in>
+        <in>chfn.c</in>
+        <in>chgpasswd.c</in>
+        <in>chpasswd.c</in>
+        <in>chsh.c</in>
+        <in>expiry.c</in>
+        <in>faillog.c</in>
+        <in>gpasswd.c</in>
+        <in>groupadd.c</in>
+        <in>groupdel.c</in>
+        <in>groupmems.c</in>
+        <in>groupmod.c</in>
+        <in>groups.c</in>
+        <in>grpck.c</in>
+        <in>grpconv.c</in>
+        <in>grpunconv.c</in>
+        <in>id.c</in>
+        <in>lastlog.c</in>
+        <in>login.c</in>
+        <in>login_nopam.c</in>
+        <in>logoutd.c</in>
+        <in>newgrp.c</in>
+        <in>newusers.c</in>
+        <in>nologin.c</in>
+        <in>passwd.c</in>
+        <in>pwck.c</in>
+        <in>pwconv.c</in>
+        <in>pwunconv.c</in>
+        <in>su.c</in>
+        <in>suauth.c</in>
+        <in>sulogin.c</in>
+        <in>useradd.c</in>
+        <in>userdel.c</in>
+        <in>usermod.c</in>
+        <in>vipw.c</in>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>configure</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+        </makeTool>
+      </makefileType>
+      <item path="contrib/adduser-old.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="contrib/adduser.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="contrib/pwdauth.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <folder path="0/contrib">
+        <cTool>
+          <incDir>
+            <pElem>contrib</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/lib">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/libmisc">
+        <cTool>
+          <incDir>
+            <pElem>libmisc</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src">
+        <cTool>
+          <incDir>
+            <pElem>src</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <item path="lib/commonio.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/encrypt.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/fields.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/fputsx.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/get_gid.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/get_pid.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/get_uid.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/getdef.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/getlong.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/getulong.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/groupio.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/groupmem.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/gshadow.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/lockpw.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/nscd.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/port.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/pwauth.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/pwio.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/pwmem.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/selinux.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/semanage.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/sgetgrent.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/sgetpwent.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/sgetspent.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/sgroupio.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/shadow.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/shadowio.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/shadowmem.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/spawn.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/tcbfuncs.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="lib/utent.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/addgrps.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/age.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/audit_help.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/basename.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/chkname.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/chowndir.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/chowntty.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/cleanup.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/cleanup_group.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/cleanup_user.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/console.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/copydir.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/entry.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/env.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/failure.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/find_new_gid.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/find_new_uid.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/getdate.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/getgr_nam_gid.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/getrange.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/hushed.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/isexpired.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/limits.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/list.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/log.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/loginprompt.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/mail.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/motd.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/myname.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/obscure.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/pam_pass.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/pam_pass_non_interractive.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="libmisc/pwd2spwd.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/pwd_init.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/pwdcheck.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/remove_tree.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/rlogin.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/root_flag.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/salt.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/setugid.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/setupenv.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/shell.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/strtoday.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/sub.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/sulog.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/ttytype.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/tz.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/ulimit.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/user_busy.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/utmp.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/valid.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/xgetXXbyYY.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/xgetgrgid.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/xgetgrnam.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/xgetpwnam.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/xgetpwuid.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/xgetspnam.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/xmalloc.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="libmisc/yesno.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/chage.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/chfn.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/chgpasswd.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/chpasswd.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/chsh.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/expiry.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/faillog.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/gpasswd.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/groupadd.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/groupdel.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/groupmems.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/groupmod.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/groups.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/grpck.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/grpconv.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/grpunconv.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/id.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/lastlog.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/login.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/login_nopam.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/logoutd.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/newgrp.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/newusers.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/nologin.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/passwd.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/pwck.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/pwconv.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/pwunconv.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/su.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/suauth.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/sulogin.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/useradd.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/userdel.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/usermod.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/vipw.c" ex="false" tool="0" flavor2="2">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

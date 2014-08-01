@@ -1,0 +1,50 @@
+--- src/userdel.c
++++ src/userdel.c	2012/09/25 13:46:38
+@@ -635,13 +635,13 @@
+  *	cron, at, or print jobs.
+  */
+ 
+-static void user_cancel (const char *user)
++static void call_script (const char *program, const char *user)
+ {
+ 	const char *cmd;
+ 	const char *argv[3];
+ 	int status;
+ 
+-	cmd = getdef_str ("USERDEL_CMD");
++	cmd = getdef_str (program);
+ 	if (NULL == cmd) {
+ 		return;
+ 	}
+@@ -1032,9 +1032,10 @@
+ 	}
+ 
+ 	/*
+-	 * Do the hard stuff - open the files, create the user entries,
+-	 * create the home directory, then close and update the files.
++	 * Do the hard stuff - open the files, remove the user entries,
++	 * remove the home directory, then close and update the files.
+ 	 */
++	call_script ("USERDEL_PRECMD", user_name);
+ 	open_files ();
+ 	update_user ();
+ 	update_groups ();
+@@ -1137,7 +1138,7 @@
+ 	 * Cancel any crontabs or at jobs. Have to do this before we remove
+ 	 * the entry from /etc/passwd.
+ 	 */
+-	user_cancel (user_name);
++	call_script ("USERDEL_CMD", user_name);
+ 	close_files ();
+ 
+ #ifdef WITH_TCB
+@@ -1147,6 +1148,8 @@
+ 	nscd_flush_cache ("passwd");
+ 	nscd_flush_cache ("group");
+ 
++	/* Call the post script, for example to rebuild NIS database */
++	call_script ("USERDEL_POSTCMD", user_name);
++
+ 	return ((0 != errors) ? E_HOMEDIR : E_SUCCESS);
+ }
+-

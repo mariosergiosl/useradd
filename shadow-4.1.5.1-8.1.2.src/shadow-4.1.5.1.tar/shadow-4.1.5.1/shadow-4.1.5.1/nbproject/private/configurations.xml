@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="94">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="contrib">
+        <in>adduser-old.c</in>
+        <in>adduser.c</in>
+        <in>pwdauth.c</in>
+      </df>
+      <df name="doc">
+      </df>
+      <df name="etc">
+        <df name="pam.d">
+        </df>
+      </df>
+      <df name="lib">
+        <in>commonio.c</in>
+        <in>commonio.h</in>
+        <in>defines.h</in>
+        <in>encrypt.c</in>
+        <in>exitcodes.h</in>
+        <in>faillog.h</in>
+        <in>fields.c</in>
+        <in>fputsx.c</in>
+        <in>get_gid.c</in>
+        <in>get_pid.c</in>
+        <in>get_uid.c</in>
+        <in>getdef.c</in>
+        <in>getdef.h</in>
+        <in>getlong.c</in>
+        <in>getulong.c</in>
+        <in>groupio.c</in>
+        <in>groupio.h</in>
+        <in>groupmem.c</in>
+        <in>gshadow.c</in>
+        <in>gshadow_.h</in>
+        <in>lockpw.c</in>
+        <in>nscd.c</in>
+        <in>nscd.h</in>
+        <in>pam_defs.h</in>
+        <in>port.c</in>
+        <in>port.h</in>
+        <in>prototypes.h</in>
+        <in>pwauth.c</in>
+        <in>pwauth.h</in>
+        <in>pwio.c</in>
+        <in>pwio.h</in>
+        <in>pwmem.c</in>
+        <in>selinux.c</in>
+        <in>semanage.c</in>
+        <in>sgetgrent.c</in>
+        <in>sgetpwent.c</in>
+        <in>sgetspent.c</in>
+        <in>sgroupio.c</in>
+        <in>sgroupio.h</in>
+        <in>shadow.c</in>
+        <in>shadowio.c</in>
+        <in>shadowio.h</in>
+        <in>shadowmem.c</in>
+        <in>spawn.c</in>
+        <in>tcbfuncs.c</in>
+        <in>tcbfuncs.h</in>
+        <in>utent.c</in>
+      </df>
+      <df name="libmisc">
+        <in>addgrps.c</in>
+        <in>age.c</in>
+        <in>audit_help.c</in>
+        <in>basename.c</in>
+        <in>chkname.c</in>
+        <in>chkname.h</in>
+        <in>chowndir.c</in>
+        <in>chowntty.c</in>
+        <in>cleanup.c</in>
+        <in>cleanup_group.c</in>
+        <in>cleanup_user.c</in>
+        <in>console.c</in>
+        <in>copydir.c</in>
+        <in>entry.c</in>
+        <in>env.c</in>
+        <in>failure.c</in>
+        <in>failure.h</in>
+        <in>find_new_gid.c</in>
+        <in>find_new_uid.c</in>
+        <in>getdate.c</in>
+        <in>getdate.h</in>
+        <in>getgr_nam_gid.c</in>
+        <in>getrange.c</in>
+        <in>hushed.c</in>
+        <in>isexpired.c</in>
+        <in>limits.c</in>
+        <in>list.c</in>
+        <in>log.c</in>
+        <in>loginprompt.c</in>
+        <in>mail.c</in>
+        <in>motd.c</in>
+        <in>myname.c</in>
+        <in>obscure.c</in>
+        <in>pam_pass.c</in>
+        <in>pam_pass_non_interractive.c</in>
+        <in>pwd2spwd.c</in>
+        <in>pwd_init.c</in>
+        <in>pwdcheck.c</in>
+        <in>remove_tree.c</in>
+        <in>rlogin.c</in>
+        <in>root_flag.c</in>
+        <in>salt.c</in>
+        <in>setugid.c</in>
+        <in>setupenv.c</in>
+        <in>shell.c</in>
+        <in>strtoday.c</in>
+        <in>sub.c</in>
+        <in>sulog.c</in>
+        <in>ttytype.c</in>
+        <in>tz.c</in>
+        <in>ulimit.c</in>
+        <in>user_busy.c</in>
+        <in>utmp.c</in>
+        <in>valid.c</in>
+        <in>xgetXXbyYY.c</in>
+        <in>xgetgrgid.c</in>
+        <in>xgetgrnam.c</in>
+        <in>xgetpwnam.c</in>
+        <in>xgetpwuid.c</in>
+        <in>xgetspnam.c</in>
+        <in>xmalloc.c</in>
+        <in>yesno.c</in>
+      </df>
+      <df name="man">
+        <df name="cs">
+          <df name="man1">
+          </df>
+          <df name="man5">
+          </df>
+          <df name="man8">
+          </df>
+        </df>
+        <df name="da">
+          <df name="man1">
+          </df>
+          <df name="man5">
+          </df>
+          <df name="man8">
+          </df>
+        </df>
+        <df name="de">
+          <df name="man1">
+          </df>
+          <df name="man3">
+          </df>
+          <df name="man5">
+          </df>
+          <df name="man8">
+          </df>
+        </df>
+        <df name="es">
+        </df>
+        <df name="fi">
+          <df name="man1">
+          </df>
+        </df>
+        <df name="fr">
+          <df name="man1">
+          </df>
+          <df name="man3">
+          </df>
+          <df name="man5">
+          </df>
+          <df name="man8">
+          </df>
+        </df>
+        <df name="hu">
+          <df name="man1">
+          </df>
+          <df name="man5">
+          </df>
+          <df name="man8">
+          </df>
+        </df>
+        <df name="id">
+          <df name="man1">
+          </df>
+          <df name="man8">
+          </df>
+        </df>
+        <df name="it">
+          <df name="man1">
+          </df>
+          <df name="man3">
+          </df>
+          <df name="man5">
+          </df>
+          <df name="man8">
+          </df>
+        </df>
+        <df name="ja">
+          <df name="man1">
+          </df>
+          <df name="man3">
+          </df>
+          <df name="man5">
+          </df>
+          <df name="man8">
+          </df>
+        </df>
+        <df name="ko">
+          <df name="man1">
+          </df>
+          <df name="man5">
+          </df>
+          <df name="man8">
+          </df>
+        </df>
+        <df name="login.defs.d">
+        </df>
+        <df name="man1">
+        </df>
+        <df name="man3">
+        </df>
+        <df name="man5">
+        </df>
+        <df name="man8">
+        </df>
+        <df name="pl">
+          <df name="man1">
+          </df>
+          <df name="man3">
+          </df>
+          <df name="man5">
+          </df>
+          <df name="man8">
+          </df>
+        </df>
+        <df name="po">
+        </df>
+        <df name="pt_BR">
+          <df name="man1">
+          </df>
+          <df name="man5">
+          </df>
+          <df name="man8">
+          </df>
+        </df>
+        <df name="ru">
+          <df name="man1">
+          </df>
+          <df name="man3">
+          </df>
+          <df name="man5">
+          </df>
+          <df name="man8">
+          </df>
+        </df>
+        <df name="sv">
+          <df name="man1">
+          </df>
+          <df name="man3">
+          </df>
+          <df name="man5">
+          </df>
+          <df name="man8">
+          </df>
+        </df>
+        <df name="tr">
+          <df name="man1">
+          </df>
+          <df name="man5">
+          </df>
+          <df name="man8">
+          </df>
+        </df>
+        <df name="zh_CN">
+          <df name="man1">
+          </df>
+          <df name="man3">
+          </df>
+          <df name="man5">
+          </df>
+          <df name="man8">
+          </df>
+        </df>
+        <df name="zh_TW">
+          <df name="man1">
+          </df>
+          <df name="man5">
+          </df>
+          <df name="man8">
+          </df>
+        </df>
+      </df>
+      <df name="po">
+      </df>
+      <df name="src">
+        <in>chage.c</in>
+        <in>chfn.c</in>
+        <in>chgpasswd.c</in>
+        <in>chpasswd.c</in>
+        <in>chsh.c</in>
+        <in>expiry.c</in>
+        <in>faillog.c</in>
+        <in>gpasswd.c</in>
+        <in>groupadd.c</in>
+        <in>groupdel.c</in>
+        <in>groupmems.c</in>
+        <in>groupmod.c</in>
+        <in>groups.c</in>
+        <in>grpck.c</in>
+        <in>grpconv.c</in>
+        <in>grpunconv.c</in>
+        <in>id.c</in>
+        <in>lastlog.c</in>
+        <in>login.c</in>
+        <in>login_nopam.c</in>
+        <in>logoutd.c</in>
+        <in>newgrp.c</in>
+        <in>newusers.c</in>
+        <in>nologin.c</in>
+        <in>passwd.c</in>
+        <in>pwck.c</in>
+        <in>pwconv.c</in>
+        <in>pwunconv.c</in>
+        <in>su.c</in>
+        <in>suauth.c</in>
+        <in>sulogin.c</in>
+        <in>useradd.c</in>
+        <in>userdel.c</in>
+        <in>usermod.c</in>
+        <in>vipw.c</in>
+      </df>
+    </df>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>3</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

@@ -1,0 +1,42 @@
+--- src/useradd.c
++++ src/useradd.c	2012/09/26 13:06:50
+@@ -1845,6 +1845,30 @@
+ }
+ 
+ /*
++ * call_script - call a script to do some work
++ *
++ *      call_script calls a script for additional changes to the
++ *      account.
++ */
++
++static void call_script (const char *user)
++{
++        const char *cmd;
++        const char *argv[3];
++        int status;
++
++        cmd = getdef_str ("USERADD_CMD");
++        if (NULL == cmd) {
++                return;
++        }
++        argv[0] = cmd;
++        argv[1] = user;
++        argv[2] = (char *)0;
++        (void) run_command (cmd, argv, NULL, &status);
++}
++
++
++/*
+  * main - useradd command
+  */
+ int main (int argc, char **argv)
+@@ -2076,6 +2100,7 @@
+ 	nscd_flush_cache ("passwd");
+ 	nscd_flush_cache ("group");
+ 
++	call_script (user_name);
++
+ 	return E_SUCCESS;
+ }
+-
