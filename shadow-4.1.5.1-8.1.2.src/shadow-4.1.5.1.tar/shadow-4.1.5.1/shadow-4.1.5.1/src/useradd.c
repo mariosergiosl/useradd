@@ -149,8 +149,8 @@ static bool
     sflg = false,		/* shell program for new account */
     uflg = false,		/* specify user ID for new account */
     Uflg = false;		/* create a group having the same name as the user */
-    Sflg = false;   /* executa o script default */
-    Xflg = false;   /* executa o script passado na linha de comando */
+    Sflg = false;               /* executa o script default */
+    Xflg = false;               /* executa o script passado na linha de comando */
 
 #ifdef WITH_SELINUX
 #define Zflg ('\0' != *user_selinux)
@@ -176,7 +176,7 @@ static bool home_added = false;
 #define DGROUP			"GROUP="
 #define DHOME			"HOME="
 #define DSHELL			"SHELL="
-#define DSCRIPT                 "SCRIPT"
+#define DSCRIPT                 "SCRIPT"    /*script*/
 #define DINACT			"INACTIVE="
 #define DEXPIRE			"EXPIRE="
 #define DSKEL			"SKEL="
@@ -204,6 +204,7 @@ static void lastlog_reset (uid_t);
 static void usr_update (void);
 static void create_home (void);
 static void create_mail (void);
+static void run_script (void); /*script*/
 
 /*
  * fail_exit - undo as much as possible
