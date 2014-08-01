@@ -1,0 +1,91 @@
+--- lib/getdef.c
++++ lib/getdef.c	2012/09/26 14:14:15
+@@ -51,6 +51,7 @@
+ 
+ #define NUMDEFS	(sizeof(def_table)/sizeof(def_table[0]))
+ static struct itemdef def_table[] = {
++	{"CHARACTER_CLASS", NULL},
+ 	{"CHFN_RESTRICT", NULL},
+ 	{"CONSOLE_GROUPS", NULL},
+ 	{"CONSOLE", NULL},
+--- libmisc/chkname.c
++++ libmisc/chkname.c	2012/09/27 12:32:18
+@@ -43,31 +43,55 @@
+ #ident "$Id: chkname.c 2828 2009-04-28 19:14:05Z nekral-guest $"
+ 
+ #include <ctype.h>
++#include <regex.h>
+ #include "defines.h"
+ #include "chkname.h"
++#include "getdef.h"
++#include <stdio.h>
+ 
+ static bool is_valid_name (const char *name)
+ {
+-	/*
+-	 * User/group names must match [a-z_][a-z0-9_-]*[$]
+-	 */
+-	if (('\0' == *name) ||
+-	    !((('a' <= *name) && ('z' >= *name)) || ('_' == *name))) {
+-		return false;
+-	}
++       const char *class;
++       regex_t reg;
++       int result;
++       char *buf;
++
++       /* User/group names must match [A-Za-z_][A-Za-z0-9_-.]*[A-Za-z0-9_-.$]?.
++	  This is the POSIX portable character class. The $ at the end is
++	  needed for SAMBA. But user can also specify something else in
++	  /etc/login.defs.  */
++       class = getdef_str ("CHARACTER_CLASS");
++       if (!class)
++	 class = "[a-z_][a-z0-9_.-]*[a-z0-9_.$-]\\?";
++
++       if (asprintf (&buf, "^%s$", class) < 0)
++	 return -1;
++
++       memset (&reg, 0, sizeof (regex_t));
++       result = regcomp (&reg, buf, 0);
++       free (buf);
++
++       if (result)
++	 {
++	   size_t length = regerror (result, &reg, NULL, 0);
++	   char *buffer = malloc (length);
++	   if (buffer == NULL)
++	     fputs ("running out of memory!\n", stderr);
++
++	   /* else
++	      {
++	      regerror (result, &reg, buffer, length);
++	      fprintf (stderr, _("Can't compile regular expression: %s\n"),
++	      buffer);
++	      } */
+ 
+-	while ('\0' != *++name) {
+-		if (!(( ('a' <= *name) && ('z' >= *name) ) ||
+-		      ( ('0' <= *name) && ('9' >= *name) ) ||
+-		      ('_' == *name) ||
+-		      ('-' == *name) ||
+-		      ( ('$' == *name) && ('\0' == *(name + 1)) )
+-		     )) {
+-			return false;
+-		}
+-	}
++	   return false;
++	 }
++
++       if (regexec (&reg, name, 0, NULL, 0) != 0)
++	 return false;
+ 
+-	return true;
++       return true;
+ }
+ 
+ bool is_valid_user_name (const char *name)
+@@ -96,4 +120,3 @@
+ 
+ 	return is_valid_name (name);
+ }
+-

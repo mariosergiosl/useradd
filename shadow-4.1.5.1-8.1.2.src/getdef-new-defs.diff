@@ -1,0 +1,32 @@
+--- lib/getdef.c
++++ lib/getdef.c	2012/11/13 16:26:34
+@@ -64,6 +64,7 @@
+ 	{"FAKE_SHELL", NULL},
+ 	{"GID_MAX", NULL},
+ 	{"GID_MIN", NULL},
++	{"GROUPADD_CMD", NULL},
+ 	{"HUSHLOGIN_FILE", NULL},
+ 	{"KILLCHAR", NULL},
+ 	{"LOGIN_RETRIES", NULL},
+@@ -93,7 +94,10 @@
+ 	{"UID_MAX", NULL},
+ 	{"UID_MIN", NULL},
+ 	{"UMASK", NULL},
++	{"USERADD_CMD", NULL},
+ 	{"USERDEL_CMD", NULL},
++	{"USERDEL_PRECMD", NULL},
++	{"USERDEL_POSTCMD", NULL},
+ 	{"USERGROUPS_ENAB", NULL},
+ #ifndef USE_PAM
+ 	{"CHFN_AUTH", NULL},
+@@ -129,6 +133,10 @@
+ 	{"TCB_SYMLINKS", NULL},
+ 	{"USE_TCB", NULL},
+ #endif
++	/* Used by /bin/login */
++	{"MOTD_FILE", NULL},
++	{"ENV_PATH", NULL},
++	{"ENV_ROOTPATH", NULL},
+ 	{NULL, NULL}
+ };
+ 
