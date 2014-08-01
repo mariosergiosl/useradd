@@ -96,6 +96,7 @@ static const char *def_home = "/home";
 static const char *def_shell = "";
 static const char *def_template = SKEL_DIR;
 static const char *def_create_mail_spool = "no";
+/* script */
 static const char *def_script = "";
 
 static long def_inactive = -1;
@@ -110,6 +111,7 @@ static gid_t user_gid;
 static const char *user_comment = "";
 static const char *user_home = "";
 static const char *user_shell = "";
+/* script */
 static const char *user_script = "";
 static const char *create_mail_spool = "";
 #ifdef WITH_SELINUX
@@ -149,6 +151,7 @@ static bool
     sflg = false,		/* shell program for new account */
     uflg = false,		/* specify user ID for new account */
     Uflg = false;		/* create a group having the same name as the user */
+/* script */
     Sflg = false;               /* executa o script default */
     Xflg = false;               /* executa o script passado na linha de comando */
 
@@ -361,7 +364,8 @@ static void get_defaults (void)
 		/*
 		 * Default Login Script path
 		 */
-		else if (MATCH (buf, DSCRIPT)) {
+		
+                else if (MATCH (buf, DSCRIPT)) {
 			def_script = xstrdup (cp);
 		}    
 
@@ -426,7 +430,7 @@ static void show_defaults (void)
 	printf ("INACTIVE=%ld\n", def_inactive);
 	printf ("EXPIRE=%s\n", def_expire);
 	printf ("SHELL=%s\n", def_shell);
-        printf ("SCRIPT=%s\n", def_script);
+        printf ("SCRIPT=%s\n", def_script);  /* debug */
 	printf ("SKEL=%s\n", def_template);
 	printf ("CREATE_MAIL_SPOOL=%s\n", def_create_mail_spool);
 }
@@ -452,7 +456,7 @@ static int set_defaults (void)
 	bool out_inactive = false;
 	bool out_expire = false;
 	bool out_shell = false;
-  bool out_script = false;
+        bool out_script = false; /* set */
 	bool out_skel = false;
 	bool out_create_mail_spool = false;
 
@@ -518,6 +522,7 @@ static int set_defaults (void)
 		} else if (!out_shell && MATCH (buf, DSHELL)) {
 			fprintf (ofp, DSHELL "%s\n", def_shell);
 			out_shell = true;
+                       /* script */ 
 		} else if (!out_script && MATCH (buf, DSCRIPT)) {
 			fprintf (ofp, DSCRIPT "%s\n", def_script);
 			out_script = true;
@@ -551,6 +556,7 @@ static int set_defaults (void)
 		fprintf (ofp, DEXPIRE "%s\n", def_expire);
 	if (!out_shell)
 		fprintf (ofp, DSHELL "%s\n", def_shell);
+                /* script */
 	if (!out_script)
 		fprintf (ofp, DSCRIPT "%s\n", def_script);    
 	if (!out_skel)
@@ -603,6 +609,7 @@ static int set_defaults (void)
 	              SHADOW_AUDIT_SUCCESS);
 #endif
 	SYSLOG ((LOG_INFO,
+                /* script */
 	         "useradd defaults: GROUP=%u, HOME=%s, SHELL=%s, SCRIPT=%s, INACTIVE=%ld, "
 	         "EXPIRE=%s, SKEL=%s, CREATE_MAIL_SPOOL=%s",
 	         (unsigned int) def_group, def_home, def_shell, def_script
@@ -750,6 +757,7 @@ static void usage (int status)
 	(void) fputs (_("  -s, --shell SHELL             login shell of the new account\n"), usageout);
 	(void) fputs (_("  -u, --uid UID                 user ID of the new account\n"), usageout);
 	(void) fputs (_("  -U, --user-group              create a group with the same name as the user\n"), usageout);
+        /* script */
 	(void) fputs (_("  -S, --execute-script          executa script passado atraves da linha de comando\n"), usageout);  
 #ifdef WITH_SELINUX
 	(void) fputs (_("  -Z, --selinux-user SEUSER     use a specific SEUSER for the SELinux user mapping\n"), usageout);
@@ -1023,7 +1031,8 @@ static void process_flags (int argc, char **argv)
 			{"system",         no_argument,       NULL, 'r'},
 			{"root",           required_argument, NULL, 'R'},
 			{"shell",          required_argument, NULL, 's'},
-      {"script",         required_argument, NULL, 'S'},
+                        /* script */
+                        {"script",         required_argument, NULL, 'S'},
 			{"uid",            required_argument, NULL, 'u'},
 			{"user-group",     no_argument,       NULL, 'U'},
 #ifdef WITH_SELINUX
@@ -1220,7 +1229,7 @@ static void process_flags (int argc, char **argv)
 				def_shell = optarg;
 				sflg = true;
 				break;
-			case 'S':
+			case 'S': /* script */
 				if (   ( !VALID (optarg) )
 				    || (   ('\0' != optarg[0])
 				        && ('/'  != optarg[0])
@@ -1361,7 +1370,7 @@ static void process_flags (int argc, char **argv)
 	if (!sflg) {
 		user_shell = def_shell;
 	}
-
+        /* script */
 	if (!Sflg) {
 		user_script = def_script;
 	}
@@ -1733,6 +1742,7 @@ static void usr_update (void)
 	 * happens so we know what we were trying to accomplish.
 	 */
 	SYSLOG ((LOG_INFO,
+                /* script */
 	         "new user: name=%s, UID=%u, GID=%u, home=%s, shell=%s, script=%s",
 	         user_name, (unsigned int) user_id,
 	         (unsigned int) user_gid, user_home, user_shell, user_script));
@@ -1896,6 +1906,7 @@ static void create_mail (void)
 static void run_scripts(void)
 {
 
+    /* -------------- target ------------- */
     system("/path/para/o/script.sh");
     
     
